@@ -71,7 +71,7 @@ $(function(){
           }
 
           if(response.prize){
-            message("You got the prize! It says: \n" + response.prize);
+            alert("You got the prize! It says: \n" + response.prize);
             console.log('Prize contains...', response.prize);
           }
  
