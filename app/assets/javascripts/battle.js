@@ -6,7 +6,6 @@ var error = function(text){
   $('.error').show().text(text);
 }
 
-
 $(function(){
   $('.message').hide()
   $('.error').hide()
@@ -28,7 +27,6 @@ $(function(){
         if(response.success){
           $("meta[name='csrf-token']").attr("content", response['csrfToken']);
           window.location = 'play';
-          // alert('You just started a new game. The new ID is: ' + response.id)
         }
         else{
           alert(response.message || 'Unknown Error')
@@ -73,12 +71,12 @@ $(function(){
           }
 
           if(response.prize){
-            message('You got the prize! ');
+            message("You got the prize! It says: \n" + response.prize);
             console.log('Prize contains...', response.prize);
           }
  
           if (response.error){
-            $('#game_over').show();
+            error("The game is over. Please reset to play again.")
           }
  
         }

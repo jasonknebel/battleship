@@ -34,10 +34,10 @@ class BattleController < ApplicationController
     request = {name: params[:name], email: params[:email]}
 
     begin
-      # response = self.class.post('http://battle.platform45.com/register',
-      #   body: request.to_json)
-      # response['success'] = true
-      response = {"id"=>"2154", "x"=>3, "y"=>4, "success"=>true}
+      response = self.class.post('http://battle.platform45.com/register',
+        body: request.to_json)
+      response['success'] = true
+      # response = {"id"=>"2154", "x"=>3, "y"=>4, "success"=>true}
       session[:game_id] = response['id']
     rescue
       response = {success: false, message: 'problem contacting platform45'}
