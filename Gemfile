@@ -5,7 +5,15 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+
+group :development do
+  gem 'sqlite3'
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'rb-fsevent', '~> 0.9.1'
+  gem 'pry-rails'
+end
+
 
 
 # Gems used only for assets and not required
@@ -18,6 +26,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 gem 'jquery-rails'
