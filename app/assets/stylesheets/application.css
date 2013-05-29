@@ -19,6 +19,7 @@
 
 header{
   background: gray;
+  padding: 5px;
 }
 
 body {
@@ -26,6 +27,7 @@ body {
   min-width: 450px;
   min-height: 450px;
   color: white;
+  font-family: Tahoma;
 }
 
 .container{
