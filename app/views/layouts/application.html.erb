@@ -14,7 +14,13 @@
 
   <body>
     <div class='container'>
+      <div class='message_container'>
+        <div class='message'></div>
+        <div class='error'></div>
+        <%=flash[:alert] %>
+      </div>
       <%= yield %>
+      <div class='message_container'></div>
     </div>
   </body>
   

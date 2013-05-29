@@ -8,6 +8,11 @@ class BattleController < ApplicationController
     end
   end
 
+  def reset
+    reset_session
+    redirect_to root_path
+  end
+
   def nuke
     request = {id: session[:game_id], x: params[:x], y: params[:y]}
 

@@ -1,6 +1,4 @@
-<%=flash[:alert] %>
-
-<%= form_tag("/register", :method => "get", :method=>'post') do %>
+<%= form_tag() do %>
   <div>
     <%= label_tag(:name, "Please enter your name") %>
     <%= text_field_tag(:name, 'Jason') %>

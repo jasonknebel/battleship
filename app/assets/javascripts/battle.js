@@ -16,6 +16,27 @@ $(function(){
     $('.error').hide()
   });
  
+  $('form').on('submit', function(event){
+      event.preventDefault();
+    $.ajax({
+      url: '/register',
+      data: $(this).serialize(),
+      type: 'POST',
+      datatype: 'JSON',
+      success: function(response){
+        console.log(response)
+        if(response.success){
+          $("meta[name='csrf-token']").attr("content", response['csrfToken']);
+          window.location = 'play';
+          // alert('You just started a new game. The new ID is: ' + response.id)
+        }
+        else{
+          alert(response.message || 'Unknown Error')
+        }
+      }
+    })
+    return false;
+  });
 
 
    $('#enemy_board td').on('click', function(){

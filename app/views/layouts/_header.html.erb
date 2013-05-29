@@ -1,1 +1,5 @@
-Battleship: Game #<%= session[:game_id] %>
+Battleship Game: 
+<% if session[:game_id] %>
+  #<%= session[:game_id] %>
+  <a href='/reset'>Reset Game</a>
+<% end %>
