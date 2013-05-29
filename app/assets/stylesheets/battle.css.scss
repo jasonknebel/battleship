@@ -22,3 +22,16 @@ td:hover{
 .hit{
   background: red;
 }
+
+.message_container{
+  height: 2.7em;
+  overflow: hidden;
+
+}
+
+.message{
+  background-color: #CFC;
+  border: solid 1px #6C6;
+  border-radius: 5px;
+  padding: 5px;
+}

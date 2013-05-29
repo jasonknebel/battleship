@@ -1,4 +1,16 @@
+var message = function(text){
+  $('.message').show().text(text);
+}
+
+
 $(function(){
+  $('.message').hide()
+  
+  $(document).on('click', function(){
+    $('.message').hide()
+  });
+ 
+
 
    $('#enemy_board td').on('click', function(){
 
@@ -25,16 +37,16 @@ $(function(){
           }
 
           if(response.sunk){
-            alert('Congrats! You just sunk the enemy ' + response.sunk);
+            message('Congrats! You just sunk the enemy ' + response.sunk);
           }
 
           if(response.game_status){
-            alert('The game has been ' + response.game_status +
+            message('The game has been ' + response.game_status +
               '. If you wish to play again, please reset the game.');
           }
 
           if(response.prize){
-            alert('You got the prize! ');
+            message('You got the prize! ');
             console.log('Prize contains...', response.prize);
           }
  
@@ -45,7 +57,7 @@ $(function(){
         }
         else
         {
-          alert(response.message || 'Unknown Error');
+          message(response.message || 'Unknown Error');
         }
       }
     });
