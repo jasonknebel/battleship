@@ -2,6 +2,12 @@ class BattleController < ApplicationController
   include HTTParty
   require 'json'
 
+  def play
+    session[:game_id] = 2154
+  end
+
+  end
+
   def nuke
     request = {id: session[:game_id], x: params[:x], y: params[:y]}
 
