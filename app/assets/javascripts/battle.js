@@ -2,12 +2,18 @@ var message = function(text){
   $('.message').show().text(text);
 }
 
+var error = function(text){
+  $('.error').show().text(text);
+}
+
 
 $(function(){
   $('.message').hide()
+  $('.error').hide()
   
   $(document).on('click', function(){
     $('.message').hide()
+    $('.error').hide()
   });
  
 
@@ -57,7 +63,7 @@ $(function(){
         }
         else
         {
-          message(response.message || 'Unknown Error');
+          error(response.message || 'Unknown Error');
         }
       }
     });
