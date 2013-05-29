@@ -6,8 +6,6 @@ class BattleController < ApplicationController
     session[:game_id] = 2154
   end
 
-  end
-
   def nuke
     request = {id: session[:game_id], x: params[:x], y: params[:y]}
 
