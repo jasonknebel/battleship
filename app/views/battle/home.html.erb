@@ -1,0 +1,15 @@
+<%=flash[:alert] %>
+
+<%= form_tag("/register", :method => "get", :method=>'post') do %>
+  <div>
+    <%= label_tag(:name, "Please enter your name") %>
+    <%= text_field_tag(:name, 'Jason') %>
+  </div>
+  <div>
+    <%= label_tag(:email, "Please enter your email") %>
+    <%= text_field_tag(:email, 'jason@example.com') %>
+  </div>
+  <div>
+    <%= submit_tag("Start Game") %>
+  </div>
+<% end %>
