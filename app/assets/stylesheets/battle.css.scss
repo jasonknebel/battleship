@@ -1,3 +1,24 @@
-h1 {
-  color: red
+table{
+  display: inline-block;
+  width: 400px;
+  height: 422px;
+}
+
+td{
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  background: gray;
+
+}
+td:hover{
+    opacity: .5;
+  }
+
+.miss{
+  background: white;
+}
+
+.hit{
+  background: red;
 }

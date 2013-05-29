@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background: gray;
+}
+
+body {
+  background: rgb(0, 63, 103);
+  min-width: 450px;
+  min-height: 450px;
+  color: white;
+}
+
+.container{
+  background: white;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
