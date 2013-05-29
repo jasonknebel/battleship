@@ -66,8 +66,8 @@ $(function(){
           }
 
           if(response.game_status){
-            message('The game has been ' + response.game_status +
-              '. If you wish to play again, please reset the game.');
+            message('The enemy has ' + response.game_status +
+              ' the game. If you wish to play again, please reset the game.');
           }
 
           if(response.prize){
